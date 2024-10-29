@@ -16,4 +16,9 @@ class MoviesController extends Controller
         $movie = Movie::findOrFail($id);
         return view("movies.show", compact("movie"));
     }
+
+    //Conecçao com a route em web.php
+    public function create(){
+        return view("movies.create");
+    }
 }

@@ -20,7 +20,7 @@ use App\Http\Controllers\MoviesController;
 
 //todo -------Read delle CRUD
 
-
+// as routes estao sendo conectadas com o controler e de là ele esta se comunicando com a view!
 Route::get("/", [MoviesController::class, "index"]);
-
+Route::get('/create', [MoviesController::class, "create"])-> name("movies.create"); //sempre antes do id
 Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
