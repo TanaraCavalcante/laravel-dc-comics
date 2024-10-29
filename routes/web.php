@@ -22,3 +22,5 @@ use App\Http\Controllers\MoviesController;
 
 
 Route::get("/", [MoviesController::class, "index"]);
+
+Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
