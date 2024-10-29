@@ -4,7 +4,7 @@
 
 @section("main-content")
     <main class="container">
-        <button class="btn btn-secondary">Add new movie</button>
+        <button class="btn btn-outline-info my-3"><a href="{{ route("movies.create") }}">Add New Movie</a></button>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -19,12 +19,12 @@
             @forelse ($movies as $movie)
                 <tr>
                     <th scope="row">{{ $movie->original_title}}</th>
-                    <td >{{ $movie->title}} </td>
+                    <td>{{ $movie->title}} </td>
                     <td>{{ $movie->description}}</td>
                     <td>{{ $movie->studio}}</td>
-                    <td>{{ $movie->year}}</td>
+                    <td class="px-2">{{ $movie->year}}</td>
                     <td>
-                        <button class="btn btn-sm btn-secondary">show</button>
+                        <button class="btn btn-sm btn-outline-warning"><a href="">Show</a></button>
                     </td>
                 </tr>
             @empty

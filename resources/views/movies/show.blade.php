@@ -3,9 +3,12 @@
 @section("page-title", "Homepage")
 
 @section("main-content")
+<main class="container">
+    <article>
+        @forelse ($collection as $item)
 
-<h1>
-    show - main contents
-</h1>
+        @empty
 
+        @endforelse
+    </article>
 @endsection

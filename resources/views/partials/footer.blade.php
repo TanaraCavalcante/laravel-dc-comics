@@ -1,4 +1,4 @@
 
 {{-- <footer>
-    <h1>Footer</h1>
+    <h6 >Created by Tanara Cavalcante &hearts;</h6>
 </footer> --}}

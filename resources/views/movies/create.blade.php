@@ -5,7 +5,7 @@
 @section("main-content")
 
 <h1>
-    Create - form
+    form
 </h1>
 
 @endsection
