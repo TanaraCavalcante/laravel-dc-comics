@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('genre');
-            $table->json('actors'); // Array com os atores
+            $table->string('actors');
             $table->string('director');
             $table->integer('duration_minutes');
             $table->year('year');
