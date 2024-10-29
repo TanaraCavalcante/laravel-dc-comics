@@ -5,7 +5,7 @@
 @section("main-content")
 
 <h1>
-    store - main contents
+    store
 </h1>
 
 @endsection

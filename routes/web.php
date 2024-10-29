@@ -24,3 +24,4 @@ use App\Http\Controllers\MoviesController;
 Route::get("/", [MoviesController::class, "index"]);
 Route::get('/create', [MoviesController::class, "create"])-> name("movies.create"); //sempre antes do id
 Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
+Route::post("/", [MoviesController::class, "store"])->name("movie.store");
