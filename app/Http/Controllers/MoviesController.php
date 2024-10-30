@@ -22,7 +22,7 @@ class MoviesController extends Controller
         return view("movies.create");
     }
 
-    //Chamada post com os resultados do form executado em "create.blade.php", que serà visualizado no store.blade.php
+    //Chamada post com os resultados do form executado em "create.blade.php", que serà visualizado no show.blade.php.
     public function store(Request $request){
         $movieData = $request->all();
 
