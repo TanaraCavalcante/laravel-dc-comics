@@ -4,7 +4,7 @@
 
 @section("main-content")
     <main class="container">
-        <button class="btn btn-outline-info my-3"><a href="{{ route("movies.create") }}">Add New Movie</a></button>
+        <a href="{{ route("movies.create") }}" class="btn btn-outline-info my-3">Add New Movie</a>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -24,7 +24,7 @@
                     <td>{{ $movie->studio}}</td>
                     <td class="px-2">{{ $movie->year}}</td>
                     <td>
-                        <button class="btn btn-sm btn-outline-warning"><a href="">Show</a></button>
+                        <a href="{{ route("movies.show", $movie->id)}}" class="btn btn-sm btn-outline-warning">Show</a>
                     </td>
                 </tr>
             @empty
