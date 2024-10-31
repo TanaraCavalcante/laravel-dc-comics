@@ -24,8 +24,12 @@ class MoviesController extends Controller
 
     //Chamada post com os resultados do form executado em "create.blade.php", que serà visualizado no show.blade.php.
     public function store(Request $request){
-        $movieData = $request->all();
+        // Validaçao dos dados fornecidos pelo utente
+        $movieData = $request->validate([
+            "poster" => "required|url",
+        ]);
 
+        // dados da store
         $newMovie = new Movie();
         $newMovie-> poster = $movieData["poster"];
         $newMovie-> original_title = $movieData["original_title"];
@@ -66,7 +70,7 @@ class MoviesController extends Controller
         $movie-> country = $formData["country"];
         $movie-> studio = $formData["studio"];
         $movie-> update();
-        // lembrar de fazer o return para o edit, assim quando mandar os dados ao db retornarà na pagina.
+        // lembrar de fazer o return para o show, assim quando mandar os dados ao db retornarà na pagina.
         return redirect()->route("movies.show", ["id"=> $movie->id]);
     }
 
