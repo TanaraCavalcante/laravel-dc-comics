@@ -7,7 +7,7 @@
 
     <article>
         <div class="d-flex gap-5 m-5" >
-            <img src="{{ $movie->poster }}" class="card-img-top" alt="{{ $movie->original_title }}" style="width: 19rem;">
+            <img src="{{ $movie->poster }}" class="card-img-top" alt="{{ $movie->original_title }}" style="width: 21rem;">
             <div class="card-body">
               <h2 class="card-title">{{ $movie->original_title }}</h2>
               <h4 class="card-subtitle mb-2 text-body-secondary mb-4">{{ $movie->original_title }}</h4>

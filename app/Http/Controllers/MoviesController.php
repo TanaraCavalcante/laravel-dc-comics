@@ -38,7 +38,7 @@ class MoviesController extends Controller
             "country" => "required|string|min:4|max:255",
             "studio" => "required|string|min:4|max:255",
         ]);
-        
+
         // dados da store
         $newMovie = new Movie();
         $newMovie-> poster = $movieData["poster"];
@@ -66,19 +66,32 @@ class MoviesController extends Controller
 
     //essa funçao è necessaria pois realiza o update in storage
     public function update(Request $request, string $id){
-        $formData = $request->all();
+        $movieData = $request->validate([
+            "poster" => "required|url", //controlla se è uma url
+            "original_title" => "required|string|min:2|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
+            "title" => "required|string|min:2|max:255",
+            "description" => "required|string|min:4|max:255",
+            "genre" => "required|string|min:4|max:255",
+            "actors" => "required|string|min:4|max:255",
+            "director" => "required|string|min:4|max:255",
+            "duration_minutes" => "required|integer", //min e max em numeros
+            "year" => "required|integer|min:1950", //verificar entre 1950 e os dias atuais
+            "country" => "required|string|min:4|max:255",
+            "studio" => "required|string|min:4|max:255",
+        ]);
+
         $movie = Movie::findOrFail($id);
-        $movie-> poster = $formData["poster"];
-        $movie-> original_title = $formData["original_title"];
-        $movie-> title = $formData["title"];
-        $movie-> description = $formData["description"];
-        $movie-> genre = $formData["genre"];
-        $movie-> actors = $formData["actors"];
-        $movie-> director = $formData["director"];
-        $movie-> duration_minutes = $formData["duration_minutes"];
-        $movie-> year = $formData["year"];
-        $movie-> country = $formData["country"];
-        $movie-> studio = $formData["studio"];
+        $movie-> poster = $movieData["poster"];
+        $movie-> original_title = $movieData["original_title"];
+        $movie-> title = $movieData["title"];
+        $movie-> description = $movieData["description"];
+        $movie-> genre = $movieData["genre"];
+        $movie-> actors = $movieData["actors"];
+        $movie-> director = $movieData["director"];
+        $movie-> duration_minutes = $movieData["duration_minutes"];
+        $movie-> year = $movieData["year"];
+        $movie-> country = $movieData["country"];
+        $movie-> studio = $movieData["studio"];
         $movie-> update();
         // lembrar de fazer o return para o show, assim quando mandar os dados ao db retornarà na pagina.
         return redirect()->route("movies.show", ["id"=> $movie->id]);
