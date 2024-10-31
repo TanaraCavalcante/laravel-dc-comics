@@ -26,7 +26,9 @@ class MoviesController extends Controller
     public function store(Request $request){
         // Validaçao dos dados fornecidos pelo utente
         $movieData = $request->validate([
-            "poster" => "required|url",
+            "poster" => "required|url", //controlla se è uma url
+            "original_title" => "required|string|min:4|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
+            "title" => "required|string|min:4|max:255",
         ]);
 
         // dados da store

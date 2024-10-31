@@ -8,8 +8,17 @@
 
         <div class="row justify-content-center">
             <h2 class="col-12 col-md-8 mb-5" >Insert a new Hero-movie</h2>
+            {{-- Display de validaçao dos dados fornecidos pelo utente --}}
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="col-12 col-md-8">
-
                 <form method="POST" action="{{route("movie.store")}}">
                     @csrf  {{--  mando eu mesmo(form) as informaçoes ao store! --}}
                     <div class="mb-3 row">
