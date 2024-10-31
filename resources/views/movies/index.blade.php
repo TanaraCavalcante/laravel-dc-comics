@@ -24,7 +24,12 @@
                     <td>
                         <a href="{{ route("movies.show", $movie->id)}}" class="btn btn-sm btn-outline-warning">Show</a>
                         <a href="{{ route("movies.edit", $movie->id)}}" class="btn btn-sm btn-outline-success">Edit</a>
-                        <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                        {{-- implemento um form com um botao dentro de modo que este form enviara o meu metodo diretamente ao db, executando a oredem de deletar nesse caso. --}}
+                        <form action="{{ route("movie.delete", $movie->id)}}" method="POST" class="d-inline">
+                            @csrf
+                            @method("DELETE")
+                            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                        </form>
                     </td>
                 </tr>
             @empty

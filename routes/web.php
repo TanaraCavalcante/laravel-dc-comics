@@ -27,4 +27,4 @@ Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
 Route::post("/", [MoviesController::class, "store"])->name("movie.store");
 Route::get("/{id}/edit", [MoviesController::class, "edit"])->name("movies.edit");
 Route::put("/{id}", [MoviesController::class, "update"])->name("movies.update");
-Route::delete("/{id}",[MoviesController::class, "delete"])->name("movie.delete");
+Route::delete("/{id}",[MoviesController::class, "destroy"])->name("movie.delete");
