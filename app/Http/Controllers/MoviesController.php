@@ -43,4 +43,29 @@ class MoviesController extends Controller
         return redirect()->route("movies.show", ["id"=> $newMovie->id]);
     }
 
+    //As duas funçoes a seguir sao para realizar o EDIT...
+
+    public function edit(string $id){
+        $movie = Movie::findOrfail($id);
+        return view("movies.edit", compact("movie"));
+    }
+
+    //essa funçao è necessaria pois realiza o update in storage
+    public function update(Request $request, string $id){
+        $formData = $request->all();
+        $movie = Movie::findOrFail($id);
+        $movie-> poster = $formData["poster"];
+        $movie-> original_title = $formData["original_title"];
+        $movie-> title = $formData["title"];
+        $movie-> description = $formData["description"];
+        $movie-> genre = $formData["genre"];
+        $movie-> actors = $formData["actors"];
+        $movie-> director = $formData["director"];
+        $movie-> duration_minutes = $formData["duration_minutes"];
+        $movie-> year = $formData["year"];
+        $movie-> country = $formData["country"];
+        $movie-> studio = $formData["studio"];
+        $movie-> update();
+    }
+
 }

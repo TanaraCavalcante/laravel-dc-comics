@@ -25,3 +25,5 @@ Route::get("/", [MoviesController::class, "index"])->name("movies.index");
 Route::get('/create', [MoviesController::class, "create"])-> name("movies.create"); //sempre antes do id
 Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
 Route::post("/", [MoviesController::class, "store"])->name("movie.store");
+Route::get("/{id}/edit", [MoviesController::class, "edit"])->name("movies.edit");
+Route::put("/{id}", [MoviesController::class, "update"])->name("movies.update");
