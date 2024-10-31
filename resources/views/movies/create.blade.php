@@ -90,7 +90,6 @@
                     <div class="col-12 col-md-11 text-end">
                         <button type="submit" class="btn btn-success my-3">Insert</button>
                         <button type="reset" class="btn btn-warning  my-3">Reset Fields</button>
-                        <a href="{{ route("movies.index") }}" class="btn btn-info my-5">Home</a>
                     </div>
                 </form>
             </div>

@@ -18,7 +18,6 @@
               <p class="card-text"><strong>Duraction: </strong>{{ $movie->duration_minutes }} minutes.</p>
               <p class="card-text"><strong>Year: </strong>{{ $movie->year }}</p>
               <p class="card-text"><strong>Country origine: </strong>{{ $movie->country }}</p>
-               <a href="{{ route("movies.index") }}" class="btn btn-primary my-5">Back in Home</a>
             </div>
           </div>
     </article>

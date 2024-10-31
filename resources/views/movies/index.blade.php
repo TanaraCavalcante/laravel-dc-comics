@@ -3,17 +3,14 @@
 @section("page-title", "Movies-index")
 
 @section("main-content")
-    <main class="container">
-        {{-- botao para inserir filme  --}}
-        <a href="{{ route("movies.create") }}" class="btn btn-outline-info my-3">Add New Movie</a>
-
+    <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-10">
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Original Title</th>
-                            <th scope="col">actors</th>
+                            <th scope="col">Actors</th>
                             <th scope="col">Studio</th>
                             <th scope="col">Year</th>
                         </tr>
