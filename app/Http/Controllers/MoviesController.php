@@ -67,7 +67,7 @@ class MoviesController extends Controller
         $movie-> studio = $formData["studio"];
         $movie-> update();
         // lembrar de fazer o return para o edit, assim quando mandar os dados ao db retornarà na pagina.
-        return redirect()->route("movies.edit", ["id"=> $movie->id]);
+        return redirect()->route("movies.show", ["id"=> $movie->id]);
     }
 
 }

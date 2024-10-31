@@ -83,6 +83,7 @@
                     <div class="col-12 col-md-11 text-end">
                         <button type="submit" class="btn btn-success btn-lg my-3">Edit {{$movie->original_title}}</button>
                         <button type="reset" class="btn btn-warning btn-lg my-3">Reset Fields</button>
+                        <a href="{{ route("movies.index") }}" class="btn btn-info btn-lg my-5">Back in Home</a>
                     </div>
                 </form>
             </div>
