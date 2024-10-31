@@ -3,8 +3,8 @@
 @section("page-title", "Create a new movie")
 
 @section("main-content")
-<main>
-    <section class="container my-3">
+<main id="edit">
+    <section class="container py-3">
 
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">

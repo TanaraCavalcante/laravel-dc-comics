@@ -2,7 +2,7 @@
 <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid gap-3">
-          <img src="{{ asset('images/newheros.png') }}" alt="Bootstrap" width="75rem" height="65rem">
+          <img src="{{ asset('images/newheros.png') }}" alt="Bootstrap" width="70" height="50">
           <a class="navbar-brand" href="#">Hero-movies</a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">

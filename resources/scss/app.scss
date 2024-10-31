@@ -4,3 +4,23 @@ a{
     text-decoration: none;
     color: black;
 }
+
+//! Style in Create and Edit
+#create,
+#edit{
+    background-image: url('../images/background3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#create h2,
+#edit h2{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#create label,
+#edit label{
+    font-weight: 700;
+}
+
+

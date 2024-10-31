@@ -3,10 +3,10 @@
 @section("page-title", "Create a new movie")
 
 @section("main-content")
-<main>
-    <section class="container my-3">
+<main id="create">
+    <section class="container ">
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center py-3">
             <h2 class="col-12 col-md-8 mb-5" >Insert a new Hero-movie</h2>
             {{-- Display de validaçao dos dados fornecidos pelo utente --}}
             @if ($errors->any())
