@@ -31,9 +31,14 @@ class MoviesController extends Controller
             "title" => "required|string|min:2|max:255",
             "description" => "required|string|min:4|max:255",
             "genre" => "required|string|min:4|max:255",
-            "actor" => "required|string|min:4|max:255",
+            "actors" => "required|string|min:4|max:255",
             "director" => "required|string|min:4|max:255",
+            "duration_minutes" => "required|integer", //min e max em numeros
+            "year" => "required|integer|min:1950", //verificar entre 1950 e os dias atuais
+            "country" => "required|string|min:4|max:255",
+            "studio" => "required|string|min:4|max:255",
         ]);
+        
         // dados da store
         $newMovie = new Movie();
         $newMovie-> poster = $movieData["poster"];
