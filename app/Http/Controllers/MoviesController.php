@@ -70,4 +70,10 @@ class MoviesController extends Controller
         return redirect()->route("movies.show", ["id"=> $movie->id]);
     }
 
+    public function destroy(string $id){
+        $movie = Movie::findOrFail($id); //Caso nao funciona emite um erro
+        $movie -> delete();
+        return redirect()-> route("movies.index"); //redireciono a pagina inicial quando a aòao for executada.
+    }
+
 }
