@@ -18,6 +18,8 @@
                     </ul>
                 </div>
             @endif
+
+            {{-- form em branco para coleta de dados do usuario--}}
             <div class="col-12 col-md-8">
                 <form method="POST" action="{{route("movie.store")}}">
                     @csrf  {{--  mando eu mesmo(form) as informaçoes ao store! --}}

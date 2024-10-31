@@ -27,10 +27,13 @@ class MoviesController extends Controller
         // Validaçao dos dados fornecidos pelo utente
         $movieData = $request->validate([
             "poster" => "required|url", //controlla se è uma url
-            "original_title" => "required|string|min:4|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
-            "title" => "required|string|min:4|max:255",
+            "original_title" => "required|string|min:2|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
+            "title" => "required|string|min:2|max:255",
+            "description" => "required|string|min:4|max:255",
+            "genre" => "required|string|min:4|max:255",
+            "actor" => "required|string|min:4|max:255",
+            "director" => "required|string|min:4|max:255",
         ]);
-
         // dados da store
         $newMovie = new Movie();
         $newMovie-> poster = $movieData["poster"];
