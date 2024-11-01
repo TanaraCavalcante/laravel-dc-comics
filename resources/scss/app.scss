@@ -6,22 +6,24 @@ a{
 }
 
 
-
-//! Style in Create and Edit
 body {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
 }
 
-#create h2,
-#edit h2{
+h2,
+h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-#create label,
-#edit label{
+label{
     font-weight: 700;
 }
 
+#home img{
+    width: 80%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
 
