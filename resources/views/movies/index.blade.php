@@ -3,10 +3,10 @@
 @section("page-title", "Movies-index")
 
 @section("main-content")
-    <main class="container py-5">
+    <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-10">
-                <table class="table table-striped">
+                <table class="table table-striped bg-white">
                     <thead>
                         <tr>
                             <th scope="col">Original Title</th>
@@ -40,5 +40,5 @@
                     @endforelse
             </div>
         </div>
-    </main>
+    </div>
 @endsection

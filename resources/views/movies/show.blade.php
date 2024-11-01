@@ -3,7 +3,7 @@
 @section("page-title", "show-id")
 
 @section("main-content")
-<main id="show">
+<div id="show">
     <article class="container">
         <div class="d-flex gap-5 m-5" >
             <img src="{{ $movie->poster }}" class="card-img-top" alt="{{ $movie->original_title }}" style="width: 21rem;">
@@ -20,5 +20,5 @@
             </div>
           </div>
     </article>
-</main>
+</div>
 @endsection

@@ -3,7 +3,7 @@
 @section("page-title", "Create a new movie")
 
 @section("main-content")
-<main id="create">
+<div id="create">
     <section class="container ">
 
         <div class="row justify-content-center py-3">
@@ -95,5 +95,5 @@
             </div>
         </div>
     </section>
-</main>
+</div>
 @endsection
