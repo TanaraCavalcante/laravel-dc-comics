@@ -8,10 +8,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route("movies.index") }}">Home</a>
+                <a class="nav-link @if (Route::is('movies.index')) active @endif" aria-current="page" href="{{ route("movies.index") }}">
+                    Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route("movies.create") }}">Insert new movie</a>
+                <a class="nav-link @if (Route::is('movies.create')) active @endif" href="{{ route("movies.create") }}">Insert new movie</a>
               </li>
             </ul>
           </div>

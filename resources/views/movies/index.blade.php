@@ -3,7 +3,7 @@
 @section("page-title", "Movies-index")
 
 @section("main-content")
-    <main class="container my-5">
+    <main class="container py-5">
         <div class="row justify-content-center">
             <div class="col-10">
                 <table class="table table-striped">
