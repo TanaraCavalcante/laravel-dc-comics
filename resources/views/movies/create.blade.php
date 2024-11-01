@@ -3,9 +3,8 @@
 @section("page-title", "Create a new movie")
 
 @section("main-content")
-<div id="create">
-    <section class="container ">
-
+<section id="create">
+    <div class="container ">
         <div class="row justify-content-center py-3">
             <h2 class="col-12 col-md-8 mb-5" >Insert a new Hero-movie</h2>
             {{-- Display de validaçao dos dados fornecidos pelo utente --}}
@@ -94,6 +93,6 @@
                 </form>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 @endsection

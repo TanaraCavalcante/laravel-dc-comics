@@ -5,13 +5,15 @@ a{
     color: black;
 }
 
+
+
+//! Style in Create and Edit
 body {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
 }
 
-//! Style in Create and Edit
 #create h2,
 #edit h2{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);

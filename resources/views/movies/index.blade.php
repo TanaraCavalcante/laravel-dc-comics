@@ -3,6 +3,7 @@
 @section("page-title", "Movies-index")
 
 @section("main-content")
+<section id="index">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-10">
@@ -41,4 +42,5 @@
             </div>
         </div>
     </div>
+</section>
 @endsection
