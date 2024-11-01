@@ -13,15 +13,12 @@ use App\Http\Controllers\MoviesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('pages.home');
-// });
+Route::get("/", [MoviesController::class, "home"])->name("pages.home");
 
 //todo -------Read delle CRUD
 
 // as routes estao sendo conectadas com o controler e de là ele esta se comunicando com a view!
-Route::get("/", [MoviesController::class, "index"])->name("movies.index");
+Route::get("/index", [MoviesController::class, "index"])->name("movies.index");
 Route::get('/create', [MoviesController::class, "create"])-> name("movies.create"); //sempre antes do id
 Route::get('/{id}',[MoviesController::class, "show"])->name("movies.show");
 Route::post("/", [MoviesController::class, "store"])->name("movie.store");

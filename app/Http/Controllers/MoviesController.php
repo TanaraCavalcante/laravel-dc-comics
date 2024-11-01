@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class MoviesController extends Controller
 {
+    public function home(){
+        $movies = Movie::all();
+        return view("pages.home", compact("movies"));
+    }
+
     public function index(){
         $movies = Movie::all();
         return view("movies.index", compact("movies"));
