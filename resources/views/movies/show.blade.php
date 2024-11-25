@@ -18,6 +18,7 @@
               <p class="card-text"><strong>Year: </strong>{{ $movie->year }}</p>
               <p class="card-text"><strong>Country origine: </strong>{{ $movie->country }}</p>
             </div>
+            <div></div>
           </div>
     </article>
 </div>
